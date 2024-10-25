@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@100&display=swap');
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.transition-fade{
+    opacity: 1;
+    transition: 500ms;
+    transform: translateX(0);
+    transform-origin: left;
+   }
+   
+   html.is-animating .transition-fade{
+       opacity: 1;
+       transform: translateX(100%);
+   }
+   html.is-leaving .transition-fade{
+       opacity: 0;
+       transform: translateX(0);
+   }
+   
+
+section{
+    position: relative;
+    min-height: 100vh;
+    background: #557085;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: 0.5s;
+}
+
+.compte{
+    position: relative;
+    min-height: 100vh;
+    background: #2e5090;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: 0.5s;
+}
+
+
+
+section .container{
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background: #fff;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+
+section .container .user{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+section .container .user .imgBx{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    transition: 0.5;
+}
+section .container .user .imgBxs{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    transition: 0.5;
+}
+
+section .container .user .imgBxs img{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section .container .user .imgBx img{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+section .container .user .formBx{
+    position: relative;
+    width: 50%;
+    height: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    transition: 0.5s;
+    margin: 8%;
+}
+
+section .container .user .formBx h2{
+    font-size: 18px;
+    font-weight:600 ;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 80px;
+    color: #555;
+    
+}
+
+section .container .user .formBx input{
+  width: 100%;
+  padding: 10px;
+  background: #f5f5f5;
+  color: #333;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  font-size: 14px;
+  margin: 1px 0;
+  letter-spacing: 1px;
+  font-weight: 300;
+  
+}
+
+section .container .user .formBx input[type="submit"]{
+   max-width: 100px;
+   background: #677eff;
+   color: #fff;
+   cursor: pointer;
+   font-size: 14px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   transition: 0.5s;
+   margin-bottom: 30px;
+}
+
+.compte .container .user .formBx input[type="submit"]{
+    max-width: 100px;
+    background: #e73e49;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    margin-bottom: 30px;
+ }
+
+
+
+section .container .user .formBx .connecter{
+    position: relative; 
+    margin-top: 20px;
+    font-size: 12px;
+    letter-spacing: 1px;   
+    color: #555;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+section .container .user .formBx .connecter a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #577eff;
+    margin-left: 80px;
+}
+.compte .container .user .formBx .connecter a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #577eff;
+    margin-left: 50px;
+}
+
+section .container .signupBx{
+    pointer-events: none;
+}
+section .container.active .signupBx{
+    pointer-events: initial;
+}
+
+section .container .signupBx .formBx{
+    top: 100%;
+}
+
+section .container.active .signupBx .formBx{
+    top: 0;
+}
+
+section .container .signupBx .imgBx{
+     top: -100px;
+     transition: 0.5s;
+}
+section .container .signupBx .imgBxs{
+    top: 500px;
+    transition: 0.5s;
+}
+section .container.active .signupBx .imgBxs{
+    top: 0px;
+}
+section .container.active .signupBx .imgBx{
+    top: 0px;
+}
+
+section .container .signinBx  .formBx{
+   top: 0; 
+}
+section .container.active .signinBx .formBx{
+    top: 100%; 
+}
+
+section .container .signinBx  .imgBx{
+    top: 0; 
+    transition: 0.5s;
+ }
+ section .container.active .signinBx .imgBx{
+     top: -100%; 
+}
+.container .error {
+    background: #F2DEDE;
+    color: #A94442;
+    padding:10px;
+    width: 95%;
+    border-radius: 5px;
+    
+ }
+ .container .success {
+    background: #D4EDDA;
+    color: #40754C;
+    padding: 9px;
+    width: 95%;
+    border-radius: 5px;
+   
+ }
+
+
+@media (max-width: 991px) {
+    section .container{
+        max-width: 400px;
+    }
+    section .container .imgBx{
+        display: none;
+    }
+    section .container .user .formBx{
+        width: 900000%;
+    }
+    section .container.active .signinBx .formBx{
+        top: -100%; 
+    }
+    
+}
+

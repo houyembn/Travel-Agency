@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@100&display=swap');
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background: #e3edf7;
+}
+
+.tour-details{
+    padding: 0 12%;
+}
+
+.tour-title{
+    margin-top: 70px;
+}
+
+.tour-title h1{
+    font-weight: 600;
+}
+
+.stars i{
+    font-size: 1.1rem;
+    color: #63c5DA;
+}
+.tour-title .row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+
+}
+.tour-title span{
+    margin: 0 20px;
+    font-size: 16px;
+}
+.gallery{
+    display: grid;
+    grid-gap:10px ;
+    grid-template-areas: 'first first . .' 'first first . .';
+    margin: 20px 0;
+
+}
+
+.gallery div img{
+    width: 100%;
+    display: block;
+    border-radius: 15px;
+    padding: 3px;
+}
+.gallery-img-1{
+    grid-area: first;
+}
+
+.small-details h2{
+   font-weight: 550;
+}
+.small-details h4{
+   font-size: 25px;
+   text-align: right;
+}
+.small-details h4 span{
+    color:#666 ;
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
+p{
+    font-size: 18px;
+}
+.line{
+    border: 0;
+    height: 1px;
+    background: #666;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px 0 50px;
+}
+
+/*section booking */
+.container{
+    background:#add8e6;    /*#9bddff*/
+    width: 350px;
+    max-width: 350px;
+    padding: 15px;
+    border-radius: 0.5rem;
+    float: right;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+}
+.container .text{
+    font-weight: 550;
+    font-size: 25px;
+    margin: 10px;
+    text-align: center;
+}
+.container form{
+    padding: 30px 0 0 0 0;
+}
+.container form .user-details{
+ padding: 10px;
+ margin: 32px 0;
+ margin-left: 20px;
+ justify-content: space-between;
+ margin: 12px 0 12px 0;
+ margin-left: 10px;
+
+}
+form .user-details .input-box {
+    margin-bottom:15px ;
+}
+
+.user-details .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.user-details .input-box input{
+    height: 30px;
+    width: 80%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #b0e0e6;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width:2px;
+    transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+    border-color: #120a8f;
+}
+form .butt{
+    height: 45px;
+    margin: 45px 0;
+}
+
+form .butt input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 5px;
+    letter-spacing: 1px ;
+    background:linear-gradient(135deg,#1e90ff, #0f52ba) ;
+}
+
+form .butt input:hover{
+    background:linear-gradient(-135deg,#1e90ff, #0f52ba) ;
+}
+
+.button button:hover{
+    background:linear-gradient(-135deg,#1e90ff, #0f52ba) ;
+}
+
+.button button{
+    display: block;
+    margin: auto;
+    height: 50px;
+    padding: 0 47px;
+    border: 0;
+    /* border-radius: 6px; */
+    /* background-color: #2980b9; */
+    
+    cursor: pointer;
+    transition: .3s linear;
+    margin-top: 30px;  
+
+   
+    outline: none;
+
+    border-radius: 5px;
+    letter-spacing: 1px ;
+    background:linear-gradient(135deg,#1e90ff, #0f52ba) ;
+}
+
+form .button a{
+    text-decoration: none;
+    text-align: center;
+    color: #f1f1f1;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.container .error {
+    background: #F2DEDE;
+    color: #A94442;
+    padding:10px;
+    width: 95%;
+    border-radius: 5px;
+    
+ }
+ .container .success {
+    background: #D4EDDA;
+    color: #40754C;
+    padding: 9px;
+    width: 95%;
+    border-radius: 5px;
+   
+ }
+
+/*.user-details .input-box .number{
+    height: 30px;
+    width: 80%;
+    background-color: #fff;
+    border-radius: 40px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: 0.5s;
+}
+.user-details .input-box .number:hover{
+  
+    border: 2px solid #120a8f;
+}
+.user-details .input-box .number .next{
+position: absolute;
+
+margin:  15px;
+right: 350px;
+display: block;
+width: 12px;
+height: 12px;
+border-top: 2px solid #000;
+border-left: 2px solid #000;
+z-index: 1;
+transform: translateY(-50%) rotate(135deg);
+cursor: pointer;
+opacity: 0;
+transition: 0.5s;
+}
+.user-details .input-box .number:hover .next{
+    opacity: 1;
+    right: 300px; /* la valeur pour que le fléche passe à droite
+}
+.user-details .input-box .number .prev{
+position: absolute;
+margin:  15px;
+left: 1000px;
+display: block;
+width: 12px;
+height: 12px;
+border-top: 2px solid #000;
+border-left: 2px solid #000;
+z-index: 1;
+transform: translateY(-50%) rotate(315deg);
+cursor: pointer;
+opacity: 0;
+transition: 0.5s;
+}
+.user-details .input-box .number:hover .prev{
+    opacity: 1;
+    left: 950px; /* la valeur pour que le fléche passe à droite
+}*/
+#box span{
+    position: absolute;
+    display: block;
+    margin-left: 110px;
+    text-align: center;
+    display: none;
+    line-height: 30px;
+    font-size: 20px;
+    user-select: none;
+}
+
+
+#box span:nth-child(1){
+  display: initial;
+}
+
+@media(max-width: 584px){
+    .container{
+        max-width: 100%;
+    }
+    form .user-details .input-box {
+        margin-bottom:15px ;
+        width: 100%;
+    }
+    .container form .user-details{
+        max-height: 300px; /*  height du contenu du box */
+        overflow-y: scroll;
+    }
+    .user-details::-webkit-scrollbar{
+        width: 0;
+    }
+    .user-details .input-box .number .prev{
+        margin: -100px;
+        margin-left: -100px;
+        max-height: 400px;
+        position: absolute;
+    }
+    .user-details .input-box .number .next{
+        margin: -177px;
+        margin-right: -100px;
+        max-height: 400px;
+        position: absolute;
+    }
+    #box {
+        left: 80px;
+        margin-top: -190px;
+        max-height: 400px;
+        position: absolute;
+    }
+         
+}
+
+
+
+/*section plan de tour */
+.accordion{
+    margin: 40px;
+    width: 600px;
+}
+
+.accordion li{
+    list-style: none;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    background: #e3edf7;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.accordion label::before{
+    content: '+';
+    margin-right: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+input[type="radio"]{
+    display: none;
+}
+.accordion .content{
+    color: #555;
+    padding: 0 10px;
+    line-height: 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;  
+}
+
+.accordion input[type="radio"]:checked + label + .content{
+    max-height: 400px;
+    padding: 10px 10px 20px;
+}
+.accordion input[type="radio"]:checked + label::before{
+    content: '-';
+}
+h3{
+
+    top: 50px;
+    font-weight: 550;
+    font-size: 25px;
+    margin: 25px;
+   
+}
+
+h5{
+   padding: 70px;
+  
+    font-weight: 550;
+    font-size: 25px;
+  margin-left: -426px;
+   
+}
+
+/*section inclus */
+.details-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+    margin: 10px 0;
+}
+.details-list li{
+    margin-left: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #555;
+}
+.details-list li i{
+    left: -3px;
+    top:5px ;
+    color: #152238;
+}
+
+.details-list .mark{
+    margin-left: -170px;
+}
+
+/*section map */
+.map{
+    margin: 50px 1;
+   
+}
+
+.map iframe{
+    width: 100%;
+    margin-bottom: 30px;
+    
+}
+
+@media(max-width: 500px){
+    .accordion{
+        flex-direction: column;
+        max-width: 100%;
+        padding: 45px 60px 45px 60px;
+        margin-left: -15px;
+    }
+    .accordion .content{
+        width: 100%;
+        margin-top: 30px;
+    }
+    .details-list{
+        width: 20%; 
+    }
+    .details-list .mark{
+        margin-left: -10px;
+    }
+
+}
